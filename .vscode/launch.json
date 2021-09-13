@@ -1,0 +1,53 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch server",
+            "type": "php",
+            "request": "launch",
+            "program": "${workspaceRoot}/server.php",
+            "runtimeExecutable": "php",
+            "runtimeArgs": [
+                "-dzend_extension=php_xdebug.dll",
+                "-S",
+                "0.0.0.0:8000"
+            ],
+            "cwd": "${workspaceRoot}",
+            "port": 9000
+        },
+        {
+            "name": "Launch server Linux",
+            "type": "php",
+            "request": "launch",
+            "program": "${workspaceRoot}/server.php",
+            "runtimeExecutable": "php",
+            "runtimeArgs": [
+                "-S",
+                "0.0.0.0:8000"
+            ],
+            "cwd": "${workspaceRoot}",
+            "port": 9000
+        },
+        {
+            "name": "Launch server Linux Container",
+            "type": "php",
+            "request": "launch",
+            "program": "${workspaceRoot}/server.php",
+            "runtimeExecutable": "php",
+            "runtimeArgs": [
+                "-S",
+                "0.0.0.0:8000"
+            ],
+            "cwd": "${workspaceRoot}",
+            "port": 9000
+        },
+        {
+            "name": "Launch currently open script",
+            "type": "php",
+            "request": "launch",
+            "program": "${file}",
+            "cwd": "${fileDirname}",
+            "port": 9000
+        }
+    ]
+}
