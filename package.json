@@ -9,7 +9,16 @@
     "prod": "npm run production",
     "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --config=node_modules/laravel-mix/setup/webpack.config.js",
     "release": "standard-version",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "db:create": "docker run -p 5432:5432 --name=unamed-project-bd -e POSTGRES_PASSWORD=senha123 -d postgres",
+    "db:kill": "docker rm -f unamed-project-bd",
+    "db:stop": "docker stop unamed-project-bd",
+    "db:start": "docker start unamed-project-bd",
+    "db:refresh": "npm run db:kill && npm run db:create",
+    "stack:start": "docker-compose -f ./docker/docker-compose.yml -p unamed-project up -d",
+    "stack:stop": "docker stop cto_postgres cto_redis",
+    "stack:kill": "docker rm cto_postgres cto_redis",
+    "stack:refresh": "npm run stack:stop && npm run stack:kill && npm run stack:start"
   },
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
