@@ -3,38 +3,44 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use App\Providers\RouteServiceProvider;
-use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use App\Http\Requests\Auth\LoginRequest;
+use Illuminate\Support\Facades\Auth;
+use Tymon\JWTAuth\Exceptions\JWTException;
+use JWTAuth;
 
 class LoginController extends Controller
 {
-    /*
-    |--------------------------------------------------------------------------
-    | Login Controller
-    |--------------------------------------------------------------------------
-    |
-    | This controller handles authenticating users for the application and
-    | redirecting them to your home screen. The controller uses a trait
-    | to conveniently provide its functionality to your applications.
-    |
-    */
-
-    use AuthenticatesUsers;
 
     /**
-     * Where to redirect users after login.
      *
-     * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
-
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
+    public function authenticate(LoginRequest $request)
     {
-        $this->middleware('guest')->except('logout');
+        $credentials = $request->only('email', 'password');
+        if (Auth::attempt($credentials)) {
+            $user = Auth::user();
+            $token = JWTAuth::fromUser($user);
+
+            return response()->json(compact('token'), 200);
+        }
+
+        return response()->json(['error' => 'Invalid credentials'], 401);
+    }
+
+    /**
+     * 
+     */
+    public function refresh()
+    {
+        try {
+            $token = JWTAuth::getToken()->get();
+            $refreshedToken = JWTAuth::refresh($token);
+
+            return response()->json(compact('refreshedToken'));
+        } catch (JWTException $e) {
+            return response()->json(['error' => 'Could not create new token'], 500);
+        }
+
+        return response()->json(['error' => 'Invalid token'], 401);
     }
 }

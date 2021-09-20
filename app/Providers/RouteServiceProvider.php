@@ -87,5 +87,6 @@ class RouteServiceProvider extends ServiceProvider
 
         $api->group(base_path('routes/api/api.php'));
         $api->group(base_path('routes/api/auth.php'));
+        $api->group(base_path('routes/api/users.php'));
     }
 }
