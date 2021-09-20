@@ -64,7 +64,7 @@ class User extends Authenticatable implements JWTSubject
     /**
      * 
      */
-    public function isSuperAdmin()
+    public function isSadmin()
     {
         return $this->roleId == Role::SuperAdmin;
     }
@@ -74,15 +74,7 @@ class User extends Authenticatable implements JWTSubject
      */
     public function isAdmin()
     {
-        return $this->roleId == Role::Admin;
-    }
-
-    /**
-     * 
-     */
-    public function isAdminOrSadmin()
-    {
-        return $this->isAdmin() || $this->isSuperAdmin();
+        return $this->roleId == Role::Admin || $this->roleId == Role::SuperAdmin;
     }
 
 
