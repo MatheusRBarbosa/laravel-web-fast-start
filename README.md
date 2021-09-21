@@ -1,6 +1,9 @@
-# Laravel API Fast Start (Laravel v8.x)
+# Laravel API Fast Start
 Este projeto tem o objetivo de agilizar a criação de um novo projeto de API em Laravel. Este projeto conta com:
 
+
+- **Laravel** - v8.x
+- **PHP** - 7.4 
 - **Husky + commilint** - Para padronização de commits;
 - **Standard-version** - Script para automatizar criação de releases e changelog (`npm run release`);
 - **Scripts de Docker** - Scripts para gerenciar containers de docker e agilizar o desenvolvimento;
