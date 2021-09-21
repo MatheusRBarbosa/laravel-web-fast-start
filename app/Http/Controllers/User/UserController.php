@@ -9,6 +9,9 @@ use App\Transformers\UserTransformer;
 use Illuminate\Http\Request;
 use Fractal;
 
+/**
+ * @group User
+ */
 class UserController extends Controller
 {
     protected $userService;
@@ -19,7 +22,16 @@ class UserController extends Controller
     }
 
     /**
+     * Cadastro de usuário
      * 
+     * @authenticated
+     * 
+     * @bodyParam name string required Nome do usuário
+     * @bodyParam email string required Email do usuário
+     * @bodyParam password string required Senha do usuário
+     * 
+     * @transformer 201 App\Transformers\UserTransformer
+     * @transformModel App\Models\User
      */
     public function store(StoreUserRequest $request)
     {
