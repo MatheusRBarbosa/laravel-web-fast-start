@@ -14,9 +14,7 @@
 use Illuminate\Support\Facades\Route;
 
 Route::middleware(['throttle:300,1'])->group(function () {
-    Route::middleware(['jwt.auth'])->group(function () {
-        Route::get('/home', function () {
-            return view('welcome');
-        });
+    Route::get('/home', function () {
+        return view('home');
     });
 });
