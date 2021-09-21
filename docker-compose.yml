@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  postgres:
+      container_name: 'unproj_postgres'
+      image: 'postgres'
+      ports:
+        - '5432:5432'
+      environment: 
+        POSTGRES_PASSWORD: senha123
+  redis:
+      container_name: 'unproj_redis'
+      image: 'redis'
+      command: redis-server --requirepass PASSWORD
+      ports:
+        - '6379:6379'

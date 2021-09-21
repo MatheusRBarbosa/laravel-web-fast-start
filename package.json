@@ -15,9 +15,9 @@
     "db:stop": "docker stop unamed-project-bd",
     "db:start": "docker start unamed-project-bd",
     "db:refresh": "npm run db:kill && npm run db:create",
-    "stack:start": "docker-compose -f ./docker/docker-compose.yml -p unamed-project up -d",
-    "stack:stop": "docker stop cto_postgres cto_redis",
-    "stack:kill": "docker rm cto_postgres cto_redis",
+    "stack:start": "docker-compose -p unamed-project up -d",
+    "stack:stop": "docker stop unproj_postgres unproj_redis",
+    "stack:kill": "docker rm unproj_postgres unproj_redis",
     "stack:refresh": "npm run stack:stop && npm run stack:kill && npm run stack:start"
   },
   "devDependencies": {
