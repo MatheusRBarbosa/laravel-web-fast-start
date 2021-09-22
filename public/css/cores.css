@@ -1,0 +1,9 @@
+:root {
+    --background: #FBFBFB;
+    --primary: #805A95;
+    --primary-light: #ddb5f5;
+    --primary-hover: #6b4b7c;
+    --primary-disabled:#9e89a9;
+    --primary-active: #5b4069;
+    --bow-shadow: rgba(88, 0, 77, 0.4);
+}
