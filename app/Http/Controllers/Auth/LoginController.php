@@ -60,4 +60,16 @@ class LoginController extends Controller
 
         return response()->json(['error' => 'Invalid token'], 401);
     }
+
+    //--------------------------//
+    //        Web Methods       //
+    //--------------------------//
+
+    /**
+     * @hideFromAPIDocumentation
+     */
+    public function renderLogin()
+    {
+        return view('login');
+    }
 }

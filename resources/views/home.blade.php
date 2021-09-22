@@ -3,6 +3,8 @@
 
 @include('shared.head')
 
-@include('shared.nav')
+<body>
+    @include('shared.nav')
+</body>
 
 </html>

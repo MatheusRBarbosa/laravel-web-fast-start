@@ -33,6 +33,15 @@ class AuthService
     }
 
     /**
+     * Check if a valid user
+     */
+    public function isUser()
+    {
+        $user = $this->authenticatedUser();
+        return isset($user) && $user->isUser();
+    }
+
+    /**
      * Check and return authenticated user
      */
     private function authenticatedUser()
