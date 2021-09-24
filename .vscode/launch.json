@@ -10,7 +10,9 @@
             "runtimeArgs": [
                 "-dzend_extension=php_xdebug.dll",
                 "-S",
-                "0.0.0.0:8000"
+                "0.0.0.0:8000",
+                "-t",
+                "${workspaceRoot}/public"
             ],
             "cwd": "${workspaceRoot}",
             "port": 9000
