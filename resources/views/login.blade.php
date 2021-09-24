@@ -13,8 +13,8 @@
                 </h2>
                 <p class="mt-2 text-center text-sm text-gray-600">
                     Or
-                    <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">
-                        start your 14-day free trial
+                    <a href="signup" class="font-medium text-indigo-600 hover:text-indigo-500">
+                        create your account
                     </a>
                 </p>
             </div>

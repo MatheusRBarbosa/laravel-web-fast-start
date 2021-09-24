@@ -12,7 +12,7 @@ use Fractal;
 /**
  * @group User
  */
-class UserController extends Controller
+class UserApiController extends Controller
 {
     protected $userService;
 

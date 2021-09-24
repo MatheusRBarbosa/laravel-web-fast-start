@@ -73,6 +73,7 @@ class RouteServiceProvider extends ServiceProvider
 
         $web->group(base_path('routes/web/web.php'));
         $web->group(base_path('routes/web/auth.php'));
+        $web->group(base_path('routes/web/users.php'));
     }
 
     /**

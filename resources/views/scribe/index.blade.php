@@ -48,7 +48,7 @@
                             <li><a href="http://github.com/knuckleswtf/scribe">Documentation powered by Scribe ✍</a></li>
                     </ul>
             <ul class="toc-footer" id="last-updated">
-            <li>Last updated: September 21 2021</li>
+            <li>Last updated: September 24 2021</li>
         </ul>
 </div>
 <div class="page-wrapper">
@@ -66,165 +66,6 @@ You can switch the language used with the tabs at the top right (or from the nav
 
         <h1>Authenticating requests</h1>
 <p>This API is not authenticated.</p>
-
-        <h1 id="user">User</h1>
-
-    
-
-            <h2 id="user-POSTapi-signup">Cadastro de usuário
-Cadastra um novo usuário</h2>
-
-<p>
-<small class="badge badge-darkred">requires authentication</small>
-</p>
-
-
-
-<span id="example-requests-POSTapi-signup">
-<blockquote>Example request:</blockquote>
-
-
-<pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/signup" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json" \
-    --data "{
-    \"name\": \"consequuntur\",
-    \"email\": \"consectetur\",
-    \"password\": \"sapiente\"
-}"
-</code></pre>
-
-<pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/signup"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-let body = {
-    "name": "consequuntur",
-    "email": "consectetur",
-    "password": "sapiente"
-}
-
-fetch(url, {
-    method: "POST",
-    headers,
-    body: JSON.stringify(body),
-}).then(response =&gt; response.json());</code></pre>
-
-<pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$response = $client-&gt;post(
-    'http://localhost/api/signup',
-    [
-        'headers' =&gt; [
-            'Accept' =&gt; 'application/json',
-        ],
-        'json' =&gt; [
-            'name' =&gt; 'consequuntur',
-            'email' =&gt; 'consectetur',
-            'password' =&gt; 'sapiente',
-        ],
-    ]
-);
-$body = $response-&gt;getBody();
-print_r(json_decode((string) $body));</code></pre>
-
-<pre><code class="language-python">import requests
-import json
-
-url = 'http://localhost/api/signup'
-payload = {
-    "name": "consequuntur",
-    "email": "consectetur",
-    "password": "sapiente"
-}
-headers = {
-  'Content-Type': 'application/json',
-  'Accept': 'application/json'
-}
-
-response = requests.request('POST', url, headers=headers, json=payload)
-response.json()</code></pre>
-</span>
-
-<span id="example-responses-POSTapi-signup">
-            <blockquote>
-            <p>Example response (201):</p>
-        </blockquote>
-                <pre>
-
-<code class="language-json">{
-    &quot;data&quot;: {
-        &quot;id&quot;: null,
-        &quot;name&quot;: null
-    }
-}</code>
- </pre>
-    </span>
-<span id="execution-results-POSTapi-signup" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-POSTapi-signup"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-signup"></code></pre>
-</span>
-<span id="execution-error-POSTapi-signup" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-signup"></code></pre>
-</span>
-<form id="form-POSTapi-signup" data-method="POST"
-      data-path="api/signup"
-      data-authed="1"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTapi-signup', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-            </h3>
-            <p>
-            <small class="badge badge-black">POST</small>
-            <b><code>api/signup</code></b>
-        </p>
-                <p>
-            <label id="auth-POSTapi-signup" hidden>Authorization header:
-                <b><code>Bearer </code></b><input type="text"
-                                                                name="Authorization"
-                                                                data-prefix="Bearer "
-                                                                data-endpoint="POSTapi-signup"
-                                                                data-component="header"></label>
-        </p>
-                        <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
-        <p>
-            <b><code>name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="name"
-               data-endpoint="POSTapi-signup"
-               data-component="body" required  hidden>
-    <br>
-<p>Nome do usuário</p>        </p>
-                <p>
-            <b><code>email</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="email"
-               data-endpoint="POSTapi-signup"
-               data-component="body" required  hidden>
-    <br>
-<p>Email do usuário</p>        </p>
-                <p>
-            <b><code>password</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="password"
-               data-endpoint="POSTapi-signup"
-               data-component="body" required  hidden>
-    <br>
-<p>Senha do usuário</p>        </p>
-    
-    </form>
 
         <h1 id="auth">Auth</h1>
 
@@ -246,8 +87,8 @@ response.json()</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"et\",
-    \"password\": \"illum\"
+    \"email\": \"qui\",
+    \"password\": \"velit\"
 }"
 </code></pre>
 
@@ -261,8 +102,8 @@ const headers = {
 };
 
 let body = {
-    "email": "et",
-    "password": "illum"
+    "email": "qui",
+    "password": "velit"
 }
 
 fetch(url, {
@@ -279,8 +120,8 @@ $response = $client-&gt;post(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'email' =&gt; 'et',
-            'password' =&gt; 'illum',
+            'email' =&gt; 'qui',
+            'password' =&gt; 'velit',
         ],
     ]
 );
@@ -292,8 +133,8 @@ import json
 
 url = 'http://localhost/api/login'
 payload = {
-    "email": "et",
-    "password": "illum"
+    "email": "qui",
+    "password": "velit"
 }
 headers = {
   'Content-Type': 'application/json',
@@ -430,7 +271,7 @@ response.json()</code></pre>
             <pre><code class="language-http">content-type: text/html; charset=UTF-8
 cache-control: no-cache, private
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 58
+x-ratelimit-remaining: 56
  </code></pre>
         </details>         <pre>
 
@@ -463,6 +304,164 @@ x-ratelimit-remaining: 58
             <b><code>api/ping</code></b>
         </p>
                     </form>
+
+        <h1 id="user">User</h1>
+
+    
+
+            <h2 id="user-POSTapi-signup">Cadastro de usuário</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-POSTapi-signup">
+<blockquote>Example request:</blockquote>
+
+
+<pre><code class="language-bash">curl --request POST \
+    "http://localhost/api/signup" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"name\": \"id\",
+    \"email\": \"cum\",
+    \"password\": \"voluptate\"
+}"
+</code></pre>
+
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/signup"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "name": "id",
+    "email": "cum",
+    "password": "voluptate"
+}
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre>
+
+<pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;post(
+    'http://localhost/api/signup',
+    [
+        'headers' =&gt; [
+            'Accept' =&gt; 'application/json',
+        ],
+        'json' =&gt; [
+            'name' =&gt; 'id',
+            'email' =&gt; 'cum',
+            'password' =&gt; 'voluptate',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre>
+
+<pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost/api/signup'
+payload = {
+    "name": "id",
+    "email": "cum",
+    "password": "voluptate"
+}
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('POST', url, headers=headers, json=payload)
+response.json()</code></pre>
+</span>
+
+<span id="example-responses-POSTapi-signup">
+            <blockquote>
+            <p>Example response (201):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;data&quot;: {
+        &quot;id&quot;: null,
+        &quot;name&quot;: null
+    }
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-signup" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-signup"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-signup"></code></pre>
+</span>
+<span id="execution-error-POSTapi-signup" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-signup"></code></pre>
+</span>
+<form id="form-POSTapi-signup" data-method="POST"
+      data-path="api/signup"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-signup', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/signup</code></b>
+        </p>
+                <p>
+            <label id="auth-POSTapi-signup" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="POSTapi-signup"
+                                                                data-component="header"></label>
+        </p>
+                        <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="name"
+               data-endpoint="POSTapi-signup"
+               data-component="body" required  hidden>
+    <br>
+<p>Nome do usuário</p>        </p>
+                <p>
+            <b><code>email</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="email"
+               data-endpoint="POSTapi-signup"
+               data-component="body" required  hidden>
+    <br>
+<p>Email do usuário</p>        </p>
+                <p>
+            <b><code>password</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="password"
+               data-endpoint="POSTapi-signup"
+               data-component="body" required  hidden>
+    <br>
+<p>Senha do usuário</p>        </p>
+    
+    </form>
 
     
 
