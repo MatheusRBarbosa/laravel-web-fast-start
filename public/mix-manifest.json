@@ -1,6 +1,7 @@
 {
-    "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css",
-    "/js/app.min.js": "/js/app.min.js",
-    "/css/app.min.css": "/css/app.min.css"
+    "/js/webpack/app.js": "/js/webpack/app.js",
+    "/css/webpack/app.css": "/css/webpack/app.css",
+    "/js/webpack/components.js": "/js/webpack/components.js",
+    "/js/webpack/app.min.js": "/js/webpack/app.min.js",
+    "/css/webpack/app.min.css": "/css/webpack/app.min.css"
 }

@@ -12,15 +12,16 @@ const tailwindcss = require('tailwindcss');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css')
-    .postCss('resources/css/app.css', 'public/css', [
+mix.js('resources/js/app.js', 'public/js/webpack/app.js')
+    .sass('resources/sass/app.scss', 'public/css/webpack')
+    .postCss('resources/css/app.css', 'public/css/webpack', [
         tailwindcss('./tailwind.config.js')
     ]);
 
+mix.scripts('resources/js/components', 'public/js/webpack/components.js');
 
 // Minify
 mix.minify([
-    'public/js/app.js',
-    'public/css/app.css'
+    'public/js/webpack/app.js',
+    'public/css/webpack/app.css'
 ]);
