@@ -1,10 +1,28 @@
+/**
+ * 
+ */
+function validateForm(id) {
+    let valid = true;
+    let forms = document.querySelectorAll(`#${id}`)
+
+    Array.prototype.slice.call(forms)
+        .forEach(function (form) {
+            if (!form.checkValidity()) {
+                valid = false;
+            }
+
+            form.classList.add('was-validated')
+        })
+
+    return valid;
+}
 var _cachedValue = null;
 var _isLoading = false;
 
 /**
  * @return boolean
  */
-function getIsLoadign() {
+function getIsLoading() {
     return _isLoading;
 }
 
@@ -14,7 +32,7 @@ function getIsLoadign() {
  * @param {string} id Id of element to replace with the loading svg
  * @param {any} defaultValue Default value to replace loading when is done
  */
-function isLoading(is, id, defaultValue = null) {
+function setIsLoading(is, id, defaultValue = null) {
     _isLoading = is;
     is ? _startLoading(id) : _stopLoading(id, defaultValue);
 }
@@ -30,10 +48,10 @@ function _stopLoading(id, defaultValue = null) {
 }
 
 function _getLoading() {
-    return `<svg class="animate-spin h-5 w-5 mr-3 text-white" viewBox="0 0 24 24">
-        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>s
-    </svg>`;
+    return `<div class="spinner-border spinner-border-sm" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            `;
 }
 /**
  * 

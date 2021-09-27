@@ -3,6 +3,10 @@
  */
 function login(event) {
     event.preventDefault();
-    console.log(event);
-    isLoading(true, 'login-button');
+    let formIsValid = validateForm('login-form');
+
+    if (formIsValid && !getIsLoading()) {
+        console.log(event);
+        setIsLoading(true, 'login-button');
+    }
 }
