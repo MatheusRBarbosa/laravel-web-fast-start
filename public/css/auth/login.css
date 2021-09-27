@@ -1,0 +1,26 @@
+#login-page .card-position {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#login-page .card {
+    width: 20rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+#login-page .check-position {
+    margin-top: .5rem;
+}
+
+#login-page .button-position {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#login-page a {
+    color: var(--primary);
+    text-decoration: none;
+}

@@ -1,4 +1,12 @@
 var _cachedValue = null;
+var _isLoading = false;
+
+/**
+ * @return boolean
+ */
+function getIsLoadign() {
+    return _isLoading;
+}
 
 /**
  * 
@@ -7,6 +15,7 @@ var _cachedValue = null;
  * @param {any} defaultValue Default value to replace loading when is done
  */
 function isLoading(is, id, defaultValue = null) {
+    _isLoading = is;
     is ? _startLoading(id) : _stopLoading(id, defaultValue);
 }
 

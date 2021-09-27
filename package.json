@@ -9,6 +9,7 @@
     "prod": "npm run production",
     "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --config=node_modules/laravel-mix/setup/webpack.config.js",
     "release": "standard-version",
+    "release:preview": "standard-version -- --dry-run",
     "prepare": "husky install",
     "db:create": "docker run -p 5432:5432 --name=unamed-project-bd -e POSTGRES_PASSWORD=senha123 -d postgres",
     "db:kill": "docker rm -f unamed-project-bd",
@@ -23,14 +24,17 @@
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
+    "@popperjs/core": "^2.10.1",
     "axios": "^0.21.4",
+    "bootstrap": "^5.1.1",
     "cross-env": "^7.0",
     "husky": "^7.0.0",
+    "jquery": "^3.6",
     "laravel-mix": "^5.0.1",
     "lodash": "^4.17.19",
     "resolve-url-loader": "^3.1.0",
-    "sass": "^1.15.2",
-    "sass-loader": "^8.0.0",
+    "sass": "^1.32.11",
+    "sass-loader": "^10.1.1",
     "standard-version": "^9.3.1",
     "vue-template-compiler": "^2.6.14"
   },
@@ -52,10 +56,6 @@
   },
   "homepage": "https://github.com/MatheusRBarbosa/laravel6-api-fast-start#readme",
   "dependencies": {
-    "@tailwindcss/postcss7-compat": "^2.2.14",
-    "autoprefixer": "^9.8.6",
-    "jquery": "^3.6.0",
-    "postcss": "^7.0.36",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.14"
+    "postcss": "^7.0.36"
   }
 }

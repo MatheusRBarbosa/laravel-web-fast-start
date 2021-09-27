@@ -1,0 +1,51 @@
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "~bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+
+// Colors
+$primary: #1c1c1c;
+$theme-colors: (
+    "primary": $primary
+);
+
+$default-shadow: 0 0 0 0.2rem rgba($primary, 0.25);
+
+// Card
+$card-border-radius: 0.75rem;
+$card-border-color: rgba($black, .075);
+
+// Button
+$btn-border-radius: .5rem;
+
+// Forms
+// -> Input
+$input-focus-border-color: tint-color($primary, 50%);
+$input-focus-box-shadow: $default-shadow;
+
+// -> Check
+$form-check-input-checked-bg-color: $primary;
+$form-check-input-checked-border-color: tint-color($primary, 50%);
+$form-check-input-focus-box-shadow: $default-shadow;
+$form-check-input-focus-border: tint-color($primary, 50%);
+
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+// 4. Include any optional Bootstrap components as you like
+@import "~bootstrap/scss/card";
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/forms";
+
+// 5. Add additional custom code here
+
+.card {
+    .card-header {
+        padding-top: 1rem;
+        background-color: $white;
+        border-bottom: 1px solid rgba($black, .125);
+        width: 100%;
+    }
+}
