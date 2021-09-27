@@ -20,7 +20,7 @@
                     </div>
                     <div class="form-group">
                         <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" placeholder="*****">
+                        <input type="password" class="form-control" id="password" placeholder="******">
                     </div>
                     <div class="form-group form-check check-position">
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
