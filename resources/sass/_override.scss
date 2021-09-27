@@ -19,6 +19,18 @@ $card-border-color: rgba($black, .075);
 $btn-border-radius: .5rem;
 
 // Forms
+// -> Validations
+$form-validation-states: (
+  "valid": (
+    "color": $primary,
+    "icon": $form-feedback-icon-valid
+  ),
+  "invalid": (
+    "color": $form-feedback-invalid-color,
+    "icon": $form-feedback-icon-invalid
+  )
+);
+
 // -> Input
 $input-focus-border-color: tint-color($primary, 50%);
 $input-focus-box-shadow: $default-shadow;
