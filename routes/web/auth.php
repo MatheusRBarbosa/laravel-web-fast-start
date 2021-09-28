@@ -5,4 +5,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware(['throttle:300,1'])->group(function () {
     Route::get('/login', [LoginController::class, 'renderLogin']);
+    Route::post('/login', [LoginController::class, 'authenticate']);
 });

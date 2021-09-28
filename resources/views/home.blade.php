@@ -4,7 +4,7 @@
 @include('shared.head')
 
 <body>
-    @include('shared.nav')
+    home
 </body>
 
 </html>

@@ -12,17 +12,17 @@ function login(event) {
         };
 
         setIsLoading(true, 'login-button');
-        const endpoint = url('api/login');
+        const endpoint = url('login');
         request(endpoint, 'POST', obj, _onLoginSuccess, _onLoginFail);
     }
 }
 
 function _onLoginSuccess(token) {
-    console.log(token);
     setIsLoading(false, 'login-button');
+    redirect('');
 }
 
 function _onLoginFail(error) {
-    toast('Ops!', error.responseJSON.error, 'danger');
     setIsLoading(false, 'login-button');
+    toast('Ops!', error.responseJSON.error, 'danger');
 }

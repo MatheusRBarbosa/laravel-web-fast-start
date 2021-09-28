@@ -72,4 +72,6 @@ class LoginController extends Controller
     {
         return view('login');
     }
+
+    // TODO: Logout method
 }
