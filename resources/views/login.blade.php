@@ -32,7 +32,7 @@
                         <button id="login-button" type="submit" class="btn btn-primary">Submit</button>
                     </div>
                     <div class="d-flex justify-content-center">
-                        <a href="#"><small>Or create your account</small></a>
+                        <a href="signup"><small>Or create your account</small></a>
                     </div>
                 </form>
             </div>

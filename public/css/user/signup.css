@@ -1,3 +1,29 @@
-#signup-page .sign-up-left {
-    background-color: white;
+#signup-page {
+    background-color: #94add6;
+    overflow: hidden;
+    height: 100% !important;
+}
+
+#signup-page .sided-form {
+    background-color: var(--body-bg);
+    height: 100%;
+    box-shadow: 0 4px 24px -12px black;   
+}
+
+#signup-page .button-position {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#signup-page a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+#signup-page h1 {
+    margin-bottom: 8rem;
+}
+
+#signup-page input {
+    width: 25rem;
 }

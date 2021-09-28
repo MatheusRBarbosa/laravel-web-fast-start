@@ -1,6 +1,6 @@
-function sweetAlert(type, title, message, callback, customOpts = {}) {
+function sweetAlert(type, title, message, callback = null, customOpts = {}) {
     let alert = _getAlertFn(type);
-    alert(title, message, customOpts).then(callback);
+    callback ? alert(title, message, customOpts).then(callback) : alert(title, message, customOpts);
 }
 
 function _success(title, message, customOpts = {}) {

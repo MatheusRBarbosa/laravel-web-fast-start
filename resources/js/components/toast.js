@@ -6,7 +6,7 @@
  * @param {string} time
  * @param {string} template Template visual do toast, deve ser acompanhado pela view 
  */
-function showToast(header, message, event = 'default', time = 'just now', template = 'default') {
+function toast(header, message, event = 'default', time = 'just now', template = 'default') {
     let toast = null;
 
     if (template === 'default') {

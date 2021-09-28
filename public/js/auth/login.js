@@ -23,6 +23,6 @@ function _onLoginSuccess(token) {
 }
 
 function _onLoginFail(error) {
-    showToast('Ops!', error.responseJSON.error, 'danger');
+    toast('Ops!', error.responseJSON.error, 'danger');
     setIsLoading(false, 'login-button');
 }

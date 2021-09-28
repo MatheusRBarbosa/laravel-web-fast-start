@@ -1,13 +1,22 @@
 /**
  * 
- * @param {string} recurso 
+ * @param {string} resource 
  */
-function url(recurso) {
+function url(resource) {
     const protocolo = window.location.protocol;
     const host = window.location.host;
 
-    const url = `${protocolo}//${host}/${recurso}`;
+    const url = `${protocolo}//${host}/${resource}`;
     return url;
+}
+
+/**
+ * 
+ * @param {string} resource 
+ */
+function redirect(resource) {
+    const endpoint = url(resource);
+    window.location.href = endpoint;
 }
 
 /**
@@ -51,4 +60,13 @@ function request(rota, metodo, data, success, fail = null, csrf = true) {
         success: success,
         error: fail
     });
+}
+
+/**
+ * 
+ */
+function get422FirstError(error) {
+    const obj = error.responseJSON.errors;
+    const key = Object.keys(obj)[0];
+    return obj[key];
 }
