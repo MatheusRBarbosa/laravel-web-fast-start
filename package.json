@@ -36,6 +36,7 @@
     "sass": "^1.32.11",
     "sass-loader": "^10.1.1",
     "standard-version": "^9.3.1",
+    "sweetalert2": "^11.1.7",
     "vue-template-compiler": "^2.6.14"
   },
   "name": "laravel-web-fast-start",

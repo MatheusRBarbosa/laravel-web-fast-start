@@ -24,10 +24,10 @@
                         <input type="password" class="form-control" id="password" placeholder="******" minlength="6" required>
                         @include('components.form.validation', ['invalidMessage' => "Password needs at least 6 characters"])
                     </div>
-                    <div class="form-group form-check check-position">
+                    <!-- <div class="form-group form-check check-position">
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
                         <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                    </div>
+                    </div> -->
                     <div class="d-grid gap-2 col-12 mx-auto button-position">
                         <button id="login-button" type="submit" class="btn btn-primary">Submit</button>
                     </div>

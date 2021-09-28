@@ -1,6 +1,8 @@
 {
     "/js/webpack/app.js": "/js/webpack/app.js",
     "/css/webpack/app.css": "/css/webpack/app.css",
+    "/js/webpack/app.js.map": "/js/webpack/app.js.map",
+    "/css/webpack/app.css.map": "/css/webpack/app.css.map",
     "/js/webpack/components.js": "/js/webpack/components.js",
     "/js/webpack/app.min.js": "/js/webpack/app.min.js",
     "/css/webpack/app.min.css": "/css/webpack/app.min.css"

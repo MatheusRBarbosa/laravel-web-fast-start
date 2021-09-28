@@ -10,6 +10,8 @@ try {
     window.Popper = require('@popperjs/core').default;
     window.$ = window.jQuery = require('jquery');
 
+    window.Swal = require("sweetalert2/dist/sweetalert2.min").default;
+
     window.bootstrap = require('bootstrap');
 } catch (e) { }
 
