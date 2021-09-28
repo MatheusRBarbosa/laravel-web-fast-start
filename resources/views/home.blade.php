@@ -3,8 +3,8 @@
 
 @include('shared.head')
 
-<body>
-    home
+<body id="home-page" class="container">
+    @include('shared.nav')
 </body>
 
 </html>

@@ -50,6 +50,7 @@ $form-check-input-focus-border: tint-color($primary, 50%);
 @import "~bootstrap/scss/card";
 @import "~bootstrap/scss/buttons";
 @import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/offcanvas";
 
 // 5. Add additional custom code here
 
@@ -61,4 +62,11 @@ $form-check-input-focus-border: tint-color($primary, 50%);
         border-bottom: 1px solid rgba($black, .125);
         width: 100%;
     }
+}
+
+//offset
+.offcanvas-body {
+  .offset-body-options {
+    font-size: 24px;
+  }
 }

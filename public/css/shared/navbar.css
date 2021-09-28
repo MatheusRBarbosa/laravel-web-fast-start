@@ -1,0 +1,8 @@
+nav {
+    background-color: #94add6;
+}
+
+nav .nav-principal-options > * {
+    margin-left: 20px;
+    margin-right: 20px;
+}
