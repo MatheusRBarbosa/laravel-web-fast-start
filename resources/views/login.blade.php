@@ -17,12 +17,12 @@
                     <div class="form-group">
                         <label for="email">Email address</label>
                         <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="your@email.com" required>
-                        @include('components.form.validation', ['invalidMessage' => "Required field"])
+                        @include('components.form.validation', ['invalidMessage' => "Invalid email"])
                     </div>
                     <div class="form-group">
                         <label for="password">Password</label>
                         <input type="password" class="form-control" id="password" placeholder="******" minlength="6" required>
-                        @include('components.form.validation', ['invalidMessage' => "Required field"])
+                        @include('components.form.validation', ['invalidMessage' => "Password needs at least 6 characters"])
                     </div>
                     <div class="form-group form-check check-position">
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -38,6 +38,7 @@
             </div>
         </div>
     </div>
+    @include('components.toast.default-toast');
 </body>
 
 </html>
