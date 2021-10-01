@@ -7,5 +7,5 @@
  * 
  */
 function _initState() {
-    const item = $(`nav a[href$="${location.pathname}"]`).addClass('active');
+    $(`nav a[href$="${location.pathname}"]`).addClass('active');
 }
