@@ -1,7 +1,7 @@
 <head>
     <link type="text/css" rel="stylesheet" href="{{ asset('css/shared/navbar.css') }}">
     </link>
-    <!-- <script src="{{ asset('js/shared/navbar.js') }}"></script> -->
+    <script src="{{ asset('js/shared/navbar.js') }}"></script>
 </head>
 <nav class="navbar navbar-light fixed-top">
     <div>
@@ -19,10 +19,10 @@
             <div class="offcanvas-body offset-body-options">
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        <a class="nav-link" href="/"><i class="bi bi-back"></i>Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" href="/link""><i class=" bi bi-alarm-fill"></i>Link</a>
                     </li>
                 </ul>
 

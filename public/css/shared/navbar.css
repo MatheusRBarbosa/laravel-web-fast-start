@@ -6,3 +6,16 @@ nav .nav-principal-options > * {
     margin-left: 20px;
     margin-right: 20px;
 }
+
+nav .nav-item {
+    cursor: pointer;
+    font-size: 1.1rem
+}
+
+nav .nav-item a i {
+    margin-right: 10px;
+}
+
+nav .nav-item .nav-link.active {
+    font-weight: bold;
+}
