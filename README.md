@@ -1,19 +1,16 @@
-# Laravel API Fast Start
-Este projeto tem o objetivo de agilizar a criação de um novo projeto de API em Laravel. Este projeto conta com:
+# Laravel WEB Fast Start
+Este projeto tem o objetivo de agilizar a criação de um novo projeto de Backoffice em Laravel. Este projeto herda de [Laravel-API-Fast-Start](https://github.com/MatheusRBarbosa/laravel-api-fast-start), além disso conta com:
 
 
-- **Laravel** - v8.x
-- **PHP** - 7.4 
-- **Husky + commilint** - Para padronização de commits;
-- **Standard-version** - Script para automatizar criação de releases e changelog (`npm run release`);
-- **Scripts de Docker** - Scripts para gerenciar containers de docker e agilizar o desenvolvimento;
-- **Docker-compose** - Docker compose com Postgres e Redis;
-- **Transformers** - Transformers configurados e pronto para uso;
-- **Comandos CLIs** - `php artisan make:service` e `php artisan make:transformer`;
-- **Procfile** - Para agilizar a implatanção no Heroku;
-- **gitlab-ci** - CI para agializar a implantação no Heroku caso o projeto esteja no Gitlab;
-- **Roles de User** - Super Admin, Admin e User estão pré configuradas;
-- **Rotas de Auth** - Rotas de autenticação estão pré configuradas;
-- **Rota de cadastro** - Rota de cadastro de usuário está pré configurada;
-- **Middlewares de Auth** - Middlewares para verificar Roles e Auth de User;
-- **Docs** - Scribe está configurada para documentar o projeto
+- **Bootstrap** - v5.1 com tema ajustavél em `resources/sass/_override.scss`
+- **Login** - Tela de Login
+- **Signup** - Tela de cadastro
+- **Home** - Tela base de home
+- **Validations** - Validações de campos de formulários em `resources/views/components/form`
+- **Toast** - View toast em `resources/views/components/toast` com seu controle de estado `resources/js/components/toast.js`
+- **Loading** - Controle de loading em `resources/js/components/loading.js`
+- **Sweat Alert2** - Controle de alert em `resources/js/components/sweetAlert.js`
+- **Utilidade** - Alguns métodos gerais em `resources/js/components/utils.js`
+- **Head** - Header com importação de css e js dinâmico em `resources/views/shared/head.blade.php`
+- **Navbar** - Navbar com menu lateral `resources/views/shared/nav.blade.php` + `public/js/shared/navbar.js`
+- **Webpack** - Webpack configurado
