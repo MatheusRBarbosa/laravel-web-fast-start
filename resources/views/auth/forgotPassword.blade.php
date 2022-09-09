@@ -6,25 +6,27 @@
 'css' => ['css/auth/forgotPassword.css']
 ])
 
-<body id="forgotPassword-page">
-    <div class="row" style="height: 100%;">
-        <div class="col-8"></div>
-        <div class="col-4 d-flex flex-column justify-content-center align-items-center sided-form">
+<body id="forgot-page">
+    <div class="sided-form">
+        <div class="sided-content">
             <div class="row">
                 <b>Enviaremos o código de recuperação para o seu e-mail cadastrado.</b>
             </div>
             <div class="row">
                 <form method="POST" id="forgot-form" onsubmit="send(event)" novalidate>
                     <div class="form-group">
-                        <label for="email">E-Mail *</label>
+                        <label for="email">E-mail *</label>
                         <input type="email" class="form-control" id="email" placeholder="meu@email.com" required>
                         @include('components.form.validation', ['invalidMessage' => "E-mail é obrigatório"])
                     </div>
-                    <div class="d-grid gap-2 col-12 mx-auto button-position">
+                    <div class="d-flex flex-column">
                         <button id="send-button" type="submit" class="btn btn-primary">Enviar</button>
                     </div>
                     <div class="d-flex justify-content-center">
                         <a href="login"><small>Voltar para o login</small></a>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <a href="change-password"><small>Já tenho o código</small></a>
                     </div>
                 </form>
             </div>

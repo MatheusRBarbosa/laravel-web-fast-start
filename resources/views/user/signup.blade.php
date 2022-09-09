@@ -7,11 +7,10 @@
 ])
 
 <body id="signup-page">
-    <div class="row" style="height: 100%;">
-        <div class="col-8"></div>
-        <div class="col-4 d-flex flex-column justify-content-center align-items-center sided-form">
+    <div class="sided-form">
+        <div class="sided-content">
             <div class="row">
-                <h1>Create your account now</h1>
+                <h2 class="text-center">Create your account now</h2>
             </div>
             <div class="row">
                 <form method="POST" id="signup-form" onsubmit="signup(event)" novalidate>

@@ -1,13 +1,39 @@
 #signup-page {
-    background-color: #94add6;
+    background-color: var(--secondary);
     overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
     height: 100% !important;
 }
 
 #signup-page .sided-form {
     background-color: var(--body-bg);
     height: 100%;
-    box-shadow: 0 4px 24px -12px black;   
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 24px -12px black;
+}
+
+#signup-page .sided-form .sided-content {
+    width: 75%;
+}
+
+#signup-page .form-group {
+    margin-bottom: 0.5rem;
+}
+
+#signup-page .logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+#signup-page .logo img {
+    height: 50px !important;
+    width: auto !important;
 }
 
 #signup-page .button-position {
@@ -15,15 +41,29 @@
     margin-bottom: 1rem;
 }
 
-#signup-page a {
+#signup-page h2 {
+    margin-bottom: 4rem;
     color: var(--primary);
-    text-decoration: none;
 }
 
-#signup-page h1 {
-    margin-bottom: 8rem;
+@media only screen and (max-width: 1850px) {
+    #signup-page .sided-form {
+        width: 40%;
+    }
 }
 
-#signup-page input {
-    width: 25rem;
+@media only screen and (max-width: 1100px) {
+    #signup-page .sided-form {
+        width: 55%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #signup-page .sided-form {
+        width: 100%;
+    }
+
+    #signup-page .sided-form .sided-content {
+        width: 95%;
+    }
 }

@@ -7,11 +7,10 @@
 ])
 
 <body id="newPassword-page">
-    <div class="row" style="height: 100%;">
-        <div class="col-8"></div>
-        <div class="col-4 d-flex flex-column justify-content-center align-items-center sided-form">
+    <div class="sided-form">
+        <div class="sided-content">
             <div class="row">
-                <h1>Troque sua senha</h1>
+                <h2 class="text-center">Troque sua senha</h2>
             </div>
             <div class="row">
                 <form method="POST" id="newPassword-form" onsubmit="sendPassword(event)" novalidate>
@@ -35,7 +34,7 @@
                         <input type="password" class="form-control" id="password-confirm" placeholder="******" minlength="6" required>
                         @include('components.form.validation', ['invalidMessage' => "Confirmação de senha precisa de 6 caracteres"])
                     </div>
-                    <div class="d-grid gap-2 col-12 mx-auto button-position">
+                    <div class="d-flex flex-column button-position">
                         <button id="newPassword-button" type="submit" class="btn btn-primary">Confirmar</button>
                     </div>
                     <div class="d-flex justify-content-center">

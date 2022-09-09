@@ -31,8 +31,9 @@
                     <div class="d-grid gap-2 col-12 mx-auto button-position">
                         <button id="login-button" type="submit" class="btn btn-primary">Submit</button>
                     </div>
-                    <div class="d-flex justify-content-center">
+                    <div class="d-flex flex-column align-items-center justify-content-center">
                         <a href="signup"><small>Or create your account</small></a>
+                        <a href="forgot-password"><small>Forgot your password?</small></a>
                     </div>
                 </form>
             </div>
