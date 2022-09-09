@@ -70,7 +70,7 @@ class LoginController extends Controller
      */
     public function renderLogin()
     {
-        return view('login');
+        return view('auth.login');
     }
 
     // TODO: Logout method
