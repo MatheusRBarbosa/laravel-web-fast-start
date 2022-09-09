@@ -88,6 +88,25 @@ function onFail(error, buttonId = null) {
 /**
  *
  */
+function formatBrDate(date) {
+    let splitter = date.includes("T") ? "T" : null;
+    if (!splitter) {
+        splitter = date.includes(" ") ? " " : null;
+    }
+
+    date = date.split(splitter);
+    date = date[0].split("-");
+
+    const day = date[2];
+    const month = date[1];
+    const year = date[0];
+
+    return `${day}/${month}/${year}`;
+}
+
+/**
+ *
+ */
 function getErrorMessage(error) {
     return error.status == 422
         ? _get422FirstError(error)
