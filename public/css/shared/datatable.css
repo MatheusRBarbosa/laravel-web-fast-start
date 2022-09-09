@@ -1,0 +1,48 @@
+#filter-form {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+}
+
+#filter-form .submit-filter input[type="text"] {
+    margin-right: 1rem;
+    width: 20rem;
+}
+
+#filter-form .submit-filter button i {
+    margin-left: 0.5rem;
+}
+
+.fast-table tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+    height: 3rem;
+}
+
+table.fast-table .ordeble-column {
+    cursor: pointer;
+}
+
+table.fast-table .table-title {
+    width: 50rem;
+}
+
+table.fast-table i {
+    font-size: 18px;
+    cursor: pointer;
+    margin-right: 0.3rem;
+    margin-left: 0.3rem;
+}
+
+table.fast-table .fix-table-header {
+    width: 100% !important;
+}
+
+table.fast-table a i {
+    color: black;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
