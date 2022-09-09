@@ -1,0 +1,19 @@
+.pages nav {
+    background-color: transparent;
+    padding-bottom: 1rem;
+}
+
+.pages nav ul {
+    display: flex;
+    margin-top: 3rem;
+    justify-content: flex-end;
+}
+
+.pages nav ul.pagination .page-item.active .page-link {
+    background-color: var(--primary);
+}
+
+.pages nav ul li a {
+    color: var(--primary);
+    cursor: pointer;
+}
