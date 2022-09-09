@@ -72,6 +72,20 @@ function request(rota, metodo, data, success, fail = null, csrf = true) {
 }
 
 /**
+ * @param {Object} error
+ * @param {string} buttonId Id do botão para parar loading
+ */
+function onFail(error, buttonId = null) {
+    console.log("change password error >> ", error);
+
+    sweetAlert("error", "Ops!", getErrorMessage(error));
+
+    if (buttonId) {
+        setIsLoading(false, buttonId);
+    }
+}
+
+/**
  *
  */
 function getErrorMessage(error) {
